@@ -9,3 +9,5 @@ https://github.com/pAIgn10/AlarmClock
  * Changed from DS1307 to DS1302
  * Added Set hours and minutes of RTC
  * When you set hours and minutes you start from the actual values and not from zero
+
+LEFT: When in Set Alarm Minutes jump to Set Hours and Minutes
