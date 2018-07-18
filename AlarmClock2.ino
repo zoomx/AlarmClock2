@@ -39,9 +39,9 @@
  * preliminary design. You are urged to study both the FSM and the code.
  * Note 2:
  * The time on the RTC can shift over time. If you notice a deviation building up,
- * just uncomment line 91 and load the example to your Arduino. That will set the
+ * just uncomment lines 174-175 and load the example to your Arduino. That will set the
  * computer's time on the RTC. Afterwards, make sure to reupload the code with
- * line 91 commented out. If you don't do that, the next time your Arduino resets
+ * lines 174-175 commented out. If you don't do that, the next time your Arduino resets
  * it will write the time again on the RTC... the time of the code's compilation.
  *
  * Author:
@@ -169,7 +169,10 @@ void setup()
   rtc.halt(false);
 
   state = SHOW_TIME;  // Initial state of the FSM
-
+  
+  //Uncomment the following lines to set a custom time on the rtc chip
+  //Time t(2018, 7, 18, 15, 36, 50, Time::kWednesday);
+  //rtc.time(t);
 }
 
 // Has the main control of the FSM (1Hz refresh rate)
